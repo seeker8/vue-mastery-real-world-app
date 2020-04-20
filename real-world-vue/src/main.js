@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
+import Vuelidate from 'vuelidate'
 import 'nprogress/nprogress.css'
 
 const requireComponent = require.context(
@@ -22,6 +23,7 @@ requireComponent.keys().forEach(fileName => {
   Vue.component(componentName, componentConfig.default || componentConfig)
 })
 
+Vue.use(Vuelidate)
 Vue.config.productionTip = false
 
 new Vue({
