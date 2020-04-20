@@ -14,6 +14,7 @@ export default new Vuex.Store({
   },
   state: {
     categories: [
+      '',
       'sustainability',
       'nature',
       'animal welfare',
