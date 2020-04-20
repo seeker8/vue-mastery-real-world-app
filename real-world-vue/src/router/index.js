@@ -5,6 +5,7 @@ import EventCreate from '../views/EventCreate.vue'
 import EventShow from '../views/EventShow.vue'
 import NotFound from '@/views/NotFound.vue'
 import NetworkIssue from '@/views/NetworkIssue.vue'
+import Example from '@/views/Example.vue'
 import NProgress from 'nprogress'
 import store from '@/store'
 
@@ -57,6 +58,10 @@ const routes = [
   {
     path: '*',
     redirect: { name: '404', params: { resource: 'page' } }
+  },
+  {
+    path: '/example',
+    component: Example
   }
 ]
 
