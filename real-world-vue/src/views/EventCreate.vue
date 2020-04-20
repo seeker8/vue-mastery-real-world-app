@@ -76,8 +76,12 @@ export default {
           })
           this.event = this.createFreshEvent()
         })
-        .catch(() => {
-          console.log('There was a problem creating your event.')
+        .catch(error => {
+          const notification = {
+            type: 'error',
+            message: `There was a problem creating your event: ${error.message}`
+          }
+          this.$store.dispatch('notification/add', notification, { root: true })
         })
     },
     createFreshEvent() {
