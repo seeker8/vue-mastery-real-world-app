@@ -20,5 +20,10 @@ npm run build
 npm run lint
 ```
 
+### Start JSON server
+```
+json-server -d 1500 db.json
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
