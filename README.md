@@ -20,6 +20,11 @@ npm run build
 npm run lint
 ```
 
+### Install JSON Server
+```
+npm i -g json-server
+```
+
 ### Start JSON server
 ```
 json-server -d 1500 db.json
