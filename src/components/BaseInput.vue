@@ -2,7 +2,6 @@
   <div>
     <label v-if="label">{{ label }}</label>
     <input
-      type="text"
       :value="value"
       @input="updateValue"
       v-bind="$attrs"
@@ -12,13 +11,9 @@
 </template>
 
 <script>
-import { formFieldMixin } from '@/mixins/formFieldMixin.js'
-
+import { formFieldMixin } from '../mixins/formFieldMixin'
 export default {
   mixins: [formFieldMixin],
-  props: {
-    value: [String, Number]
-  },
   computed: {
     listeners() {
       return {
@@ -29,5 +24,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped></style>
